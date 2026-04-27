@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <!-- Code editor / development illustration -->
+  <rect x="60" y="40" width="480" height="340" rx="20" fill="#10243a"/>
+  <rect x="60" y="40" width="480" height="50" rx="20" fill="#162d45"/>
+  <rect x="60" y="70" width="480" height="20" fill="#162d45"/>
+  <circle cx="92" cy="65" r="8" fill="#e63946"/>
+  <circle cx="116" cy="65" r="8" fill="#ffb347"/>
+  <circle cx="140" cy="65" r="8" fill="#4ecdc4"/>
+  <!-- Code lines -->
+  <rect x="100" y="110" width="120" height="8" rx="4" fill="#e63946" opacity="0.8"/>
+  <rect x="230" y="110" width="80" height="8" rx="4" fill="#4ecdc4" opacity="0.6"/>
+  <rect x="120" y="132" width="200" height="8" rx="4" fill="#5b7a9d" opacity="0.5"/>
+  <rect x="120" y="154" width="160" height="8" rx="4" fill="#ff6b6b" opacity="0.5"/>
+  <rect x="290" y="154" width="100" height="8" rx="4" fill="#4ecdc4" opacity="0.4"/>
+  <rect x="140" y="176" width="240" height="8" rx="4" fill="#5b7a9d" opacity="0.4"/>
+  <rect x="140" y="198" width="180" height="8" rx="4" fill="#e63946" opacity="0.3"/>
+  <rect x="120" y="220" width="220" height="8" rx="4" fill="#5b7a9d" opacity="0.5"/>
+  <rect x="100" y="242" width="140" height="8" rx="4" fill="#4ecdc4" opacity="0.5"/>
+  <rect x="120" y="264" width="260" height="8" rx="4" fill="#5b7a9d" opacity="0.3"/>
+  <rect x="100" y="286" width="100" height="8" rx="4" fill="#e63946" opacity="0.6"/>
+  <!-- Floating elements -->
+  <rect x="400" y="120" width="110" height="80" rx="12" fill="#1b3a5f" stroke="#e63946" stroke-width="1.5"/>
+  <circle cx="430" cy="148" r="12" fill="#e63946" opacity="0.2"/>
+  <rect x="450" y="140" width="40" height="6" rx="3" fill="#5b7a9d" opacity="0.6"/>
+  <rect x="420" y="162" width="70" height="6" rx="3" fill="#5b7a9d" opacity="0.4"/>
+  <rect x="400" y="220" width="110" height="60" rx="12" fill="#1b3a5f" stroke="#4ecdc4" stroke-width="1.5"/>
+  <rect x="420" y="238" width="70" height="6" rx="3" fill="#4ecdc4" opacity="0.5"/>
+  <rect x="420" y="254" width="50" height="6" rx="3" fill="#5b7a9d" opacity="0.4"/>
+  <!-- Bottom bar -->
+  <rect x="60" y="360" width="480" height="20" rx="0" fill="#0d2035"/>
+  <rect x="60" y="360" width="480" height="20" rx="0 0 20 20" fill="#0d2035"/>
+  <!-- Glow -->
+  <ellipse cx="300" cy="420" rx="200" ry="30" fill="#e63946" opacity="0.08"/>
+  <!-- Floating icons -->
+  <g transform="translate(30, 300)">
+    <rect width="50" height="50" rx="12" fill="#e63946" opacity="0.15"/>
+    <text x="25" y="32" text-anchor="middle" fill="#e63946" font-size="20">☁</text>
+  </g>
+  <g transform="translate(520, 100)">
+    <rect width="50" height="50" rx="12" fill="#4ecdc4" opacity="0.15"/>
+    <text x="25" y="32" text-anchor="middle" fill="#4ecdc4" font-size="20">⚡</text>
+  </g>
+</svg>
