@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none">
+  <style>
+    @keyframes bob1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes bob2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+    @keyframes bob3 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes glow { 0%,100%{opacity:0.4} 50%{opacity:0.9} }
+    @keyframes typing { 0%{width:0} 50%{width:60px} 80%{width:60px} 100%{width:0} }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes wave { 0%,100%{d:path('M0,20 Q30,10 60,20 T120,20')} 50%{d:path('M0,20 Q30,30 60,20 T120,20')} }
+    @keyframes slideIn { 0%{opacity:0;transform:translateY(8px)} 20%{opacity:1;transform:translateY(0)} 80%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-8px)} }
+    .b1 { animation: bob1 4s ease-in-out infinite; }
+    .b2 { animation: bob2 3.5s ease-in-out infinite 0.6s; }
+    .b3 { animation: bob3 5s ease-in-out infinite 1.2s; }
+    .gl { animation: glow 2.5s ease-in-out infinite; }
+    .bk { animation: blink 1s step-end infinite; }
+  </style>
+
+  <!-- Background glows -->
+  <ellipse cx="260" cy="390" rx="180" ry="24" fill="#e63946" opacity="0.1"/>
+  <circle cx="100" cy="100" r="100" fill="#e63946" opacity="0.04"/>
+  <circle cx="440" cy="300" r="80" fill="#4ecdc4" opacity="0.04"/>
+
+  <!-- Central workspace desk -->
+  <rect x="60" y="280" width="400" height="10" rx="5" fill="#e5eaf0"/>
+  <rect x="80" y="290" width="8" height="60" rx="2" fill="#d4dce6"/>
+  <rect x="432" y="290" width="8" height="60" rx="2" fill="#d4dce6"/>
+
+  <!-- Mentor person (right) -->
+  <g class="b3">
+    <circle cx="380" cy="120" r="30" fill="#ffffff" stroke="#e5eaf0" stroke-width="2"/>
+    <!-- Face -->
+    <circle cx="370" cy="114" r="3" fill="#0b1a2b" opacity="0.6"/>
+    <circle cx="390" cy="114" r="3" fill="#0b1a2b" opacity="0.6"/>
+    <path d="M372,126 Q380,132 388,126" stroke="#0b1a2b" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- Mentor badge -->
+    <circle cx="406" cy="100" r="12" fill="#e63946"/>
+    <text x="406" y="104" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">M</text>
+    <!-- Body hint -->
+    <path d="M350,148 Q380,165 410,148" fill="#4ecdc4" opacity="0.15"/>
+  </g>
+
+  <!-- Student person (left) -->
+  <g class="b1">
+    <circle cx="140" cy="130" r="26" fill="#ffffff" stroke="#e5eaf0" stroke-width="2"/>
+    <!-- Face -->
+    <circle cx="132" cy="124" r="2.5" fill="#0b1a2b" opacity="0.6"/>
+    <circle cx="148" cy="124" r="2.5" fill="#0b1a2b" opacity="0.6"/>
+    <path d="M134,136 Q140,140 146,136" stroke="#0b1a2b" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- Body hint -->
+    <path d="M114,154 Q140,168 166,154" fill="#e63946" opacity="0.1"/>
+  </g>
+
+  <!-- Guidance arrow from mentor to student -->
+  <path d="M348,130 C300,110 220,115 170,130" stroke="#e63946" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="170" cy="130" r="4" fill="#e63946" class="gl"/>
+
+  <!-- Student laptop -->
+  <g class="b1">
+    <rect x="80" y="190" width="150" height="90" rx="10" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <rect x="80" y="190" width="150" height="24" rx="10" fill="#f8f9fb"/>
+    <rect x="80" y="206" width="150" height="8" fill="#f8f9fb"/>
+    <circle cx="100" cy="202" r="4" fill="#e63946" opacity="0.6"/>
+    <circle cx="112" cy="202" r="4" fill="#ffb347" opacity="0.6"/>
+    <circle cx="124" cy="202" r="4" fill="#4ecdc4" opacity="0.6"/>
+    <!-- Code lines with typing animation -->
+    <rect x="94" y="224" width="50" height="4" rx="2" fill="#e63946" opacity="0.6"/>
+    <rect x="150" y="224" width="30" height="4" rx="2" fill="#4ecdc4" opacity="0.5"/>
+    <rect x="102" y="234" width="80" height="4" rx="2" fill="#5b7a9d" opacity="0.4"/>
+    <rect x="102" y="244" width="0" height="4" rx="2" fill="#e63946" opacity="0.5">
+      <animate attributeName="width" values="0;60;60;0" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Cursor blink -->
+    <rect x="102" y="254" width="2" height="10" fill="#e63946" class="bk"/>
+    <rect x="94" y="264" width="40" height="4" rx="2" fill="#5b7a9d" opacity="0.3"/>
+  </g>
+
+  <!-- Mentor laptop -->
+  <g class="b3">
+    <rect x="300" y="180" width="150" height="100" rx="10" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <rect x="300" y="180" width="150" height="24" rx="10" fill="#f8f9fb"/>
+    <rect x="300" y="196" width="150" height="8" fill="#f8f9fb"/>
+    <circle cx="320" cy="192" r="4" fill="#e63946" opacity="0.6"/>
+    <circle cx="332" cy="192" r="4" fill="#ffb347" opacity="0.6"/>
+    <circle cx="344" cy="192" r="4" fill="#4ecdc4" opacity="0.6"/>
+    <!-- Review dashboard -->
+    <rect x="314" y="214" width="40" height="24" rx="4" fill="#e63946" opacity="0.08"/>
+    <rect x="360" y="214" width="40" height="24" rx="4" fill="#4ecdc4" opacity="0.08"/>
+    <rect x="406" y="214" width="30" height="24" rx="4" fill="#5b7a9d" opacity="0.08"/>
+    <!-- Mini chart -->
+    <rect x="314" y="246" width="120" height="24" rx="4" fill="#f4f6fa"/>
+    <polyline points="320,264 335,256 350,260 365,250 380,254 395,244 410,248 425,240" stroke="#e63946" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <!-- Checkmark appearing -->
+    <circle cx="430" cy="220" r="8" fill="#4ecdc4" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="430" y="224" text-anchor="middle" fill="#4ecdc4" font-size="10">✓</text>
+  </g>
+
+  <!-- Floating card: skill badge -->
+  <g class="b2">
+    <rect x="10" y="240" width="60" height="60" rx="14" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <circle cx="40" cy="262" r="14" fill="#e63946" opacity="0.1" stroke="#e63946" stroke-width="1.5">
+      <animate attributeName="r" values="14;16;14" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="267" text-anchor="middle" fill="#e63946" font-size="12" font-weight="bold">JS</text>
+    <rect x="22" y="284" width="36" height="4" rx="2" fill="#5b7a9d" opacity="0.4"/>
+  </g>
+
+  <!-- Floating card: Python badge -->
+  <g class="b1">
+    <rect x="456" y="200" width="54" height="54" rx="14" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <circle cx="483" cy="220" r="12" fill="#4ecdc4" opacity="0.12" stroke="#4ecdc4" stroke-width="1.5">
+      <animate attributeName="r" values="12;14;12" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="483" y="225" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="bold">Py</text>
+    <rect x="466" y="238" width="34" height="4" rx="2" fill="#5b7a9d" opacity="0.4"/>
+  </g>
+
+  <!-- Certificate at bottom -->
+  <g class="b2">
+    <rect x="160" y="330" width="200" height="56" rx="12" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <rect x="178" y="344" width="70" height="6" rx="3" fill="#e63946" opacity="0.5"/>
+    <rect x="178" y="356" width="120" height="5" rx="2.5" fill="#5b7a9d" opacity="0.4"/>
+    <rect x="178" y="366" width="90" height="4" rx="2" fill="#5b7a9d" opacity="0.3"/>
+    <!-- Seal -->
+    <circle cx="332" cy="358" r="16" fill="#e63946" opacity="0.08" stroke="#e63946" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.08;0.2;0.08" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="332" y="363" text-anchor="middle" fill="#e63946" font-size="12" font-weight="bold">M</text>
+  </g>
+
+  <!-- Floating notification -->
+  <g class="b3">
+    <rect x="240" y="50" width="140" height="36" rx="18" fill="#ffffff" stroke="#e5eaf0" stroke-width="1.5"/>
+    <circle cx="262" cy="68" r="8" fill="#4ecdc4" opacity="0.2"/>
+    <text x="262" y="72" text-anchor="middle" fill="#4ecdc4" font-size="9">✓</text>
+    <text x="320" y="72" text-anchor="middle" fill="#0b1a2b" font-size="9" font-weight="600">Code Reviewed!</text>
+    <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Small floating dots -->
+  <circle cx="50" cy="180" r="4" fill="#e63946" opacity="0.3" class="gl"/>
+  <circle cx="480" cy="150" r="4" fill="#4ecdc4" opacity="0.3" class="gl" style="animation-delay:1s"/>
+  <circle cx="260" cy="310" r="3" fill="#e63946" opacity="0.2" class="gl" style="animation-delay:0.5s"/>
+</svg>
