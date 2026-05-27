@@ -842,7 +842,7 @@ section.soft { background: var(--brand-soft); }
 }
 
 /* ---------- Mobile ---------- */
-@media (max-width: 720px) {
+@media (max-width: 700px) {
   /* Navigation */
   .nav-links {
     display: none;
